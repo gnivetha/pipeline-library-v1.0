@@ -17,7 +17,7 @@ def call()
 		    
 		    
 			steps {
-				scmFile("master","https://github.com/keerthiuppala/maven-project.git")
+				scmFile("master","https://github.com/gnivetha/maven-project.git")
 			}
 		}
 	    stage('Read YAML file') {
