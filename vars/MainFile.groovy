@@ -20,14 +20,19 @@ def call()
 				scmFile("master","https://github.com/gnivetha/maven-project.git")
 			}
 		}
+//	    stage('Read YAML file') {
+ //       steps {
+//		echo "222222222222222222222222222222222222"
+  //          script{ datas = readYaml (file: 'env.yml') }
+//		echo datas.branch.toString()
+//		echo "333333333333333333333333333333333333"
+  //                }
+  //  }
 	    stage('Read YAML file') {
-        steps {
-		echo "222222222222222222222222222222222222"
-            script{ datas = readYaml (file: 'env.yml') }
-		echo datas.branch.toString()
-		echo "333333333333333333333333333333333333"
-                  }
-    }
+        		steps {
+            			script{ datas = readYaml (file: 'env.yml') }
+                  	}
+    		} 
 	    stage('Build') {
 			steps {
 				echo "4444444444444444444444444444444444"
