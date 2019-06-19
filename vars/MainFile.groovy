@@ -41,11 +41,18 @@ def call()
 				echo "5555555555555555555555555555555555555"
 			}
 		}
+	   
 	    stage('Upload Artifacts') {
 			steps {
 				uploadArtifactory(datas)
 			}
 		}
+	    
+	    stage('readpom') {
+		    steps {
+			    readpom(datas)
+		    }
+	    }
 	    stage('Download Artifacts') {
 			steps {
 				downloadArtifactory(datas)
